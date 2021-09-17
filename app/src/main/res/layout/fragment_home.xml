@@ -4,14 +4,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".navigation.HomeFragment"
-    android:background="@color/grey">
+    android:background="@color/grey"
+    android:fitsSystemWindows="true">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:fontFamily="@font/sf_font_family"
         android:gravity="center"
-        android:text="Home fragment"
+        android:text="Home"
         android:textSize="48sp"
         android:textStyle="bold" />
 

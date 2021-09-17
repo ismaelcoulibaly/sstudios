@@ -39,15 +39,15 @@ public class MainActivity extends AppCompatActivity {
                 Fragment selectedFragment = null;
 
                 switch(item.getId()){
-                    case R.id.home:
+                    case 1:
                         selectedFragment = new HomeFragment();
                         break;
 
-                    case R.id.search:
+                    case 2:
                         selectedFragment = new SearchFragment();
                         break;
 
-                    case R.id.messages:
+                    case 3:
                         selectedFragment = new MessagesFragment();
                         break;
                 }
@@ -59,23 +59,17 @@ public class MainActivity extends AppCompatActivity {
         bottomNavigationView.setCount(1, "10");
         bottomNavigationView.setCount(3, "10");
 
-        bottomNavigationView.show(2, true);
+        bottomNavigationView.show(1, true);
 
         bottomNavigationView.setOnClickMenuListener(new MeowBottomNavigation.ClickListener() {
             @Override
             public void onClickItem(MeowBottomNavigation.Model item) {
-                Toast.makeText(getApplicationContext()
-                        ,"You clicked" + item.getId()
-                        ,Toast.LENGTH_SHORT).show();
             }
         });
 
         bottomNavigationView.setOnReselectListener(new MeowBottomNavigation.ReselectListener() {
             @Override
             public void onReselectItem(MeowBottomNavigation.Model item) {
-                Toast.makeText(getApplicationContext()
-                        ,"You reselected" + item.getId()
-                        ,Toast.LENGTH_SHORT).show();
             }
         });
 
