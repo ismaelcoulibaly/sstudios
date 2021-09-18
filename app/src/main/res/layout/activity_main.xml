@@ -9,6 +9,9 @@
     android:orientation="vertical"
     android:fitsSystemWindows="true">
 
+    <include
+        android:id="@+id/action_bar"
+        layout="@layout/top_action_bar"/>
 
     <FrameLayout
         android:id="@+id/fragment_container"
@@ -21,7 +24,6 @@
         android:id="@+id/bottomNavigationBar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:mbn_backgroundBottomColor="#9C9B9B"
         app:mbn_circleColor="@color/black"
         app:mbn_countBackgroundColor="@color/black"
         app:mbn_countTextColor="#FFFFFF"
@@ -29,6 +31,6 @@
         app:mbn_selectedIconColor="@color/white"
         app:mbn_shadowColor="@color/black"
         app:menu="@menu/menu_items" />
-
+    <!--app:mbn_backgroundBottomColor="#9C9B9B"!-->
 
 </LinearLayout>

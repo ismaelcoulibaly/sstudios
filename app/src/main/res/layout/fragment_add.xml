@@ -1,21 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".navigation.MessagesFragment"
+    tools:context=".navigation.HomeFragment"
     android:background="@color/grey"
     android:fitsSystemWindows="true">
-
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="Messages"
         android:fontFamily="@font/sf_font_family"
-        android:textSize="48sp"
         android:gravity="center"
-        android:textStyle="bold"
-       />
+        android:text="Likes"
+        android:textSize="48sp"
+        android:textStyle="bold" />
 
-</FrameLayout>
+</RelativeLayout>
