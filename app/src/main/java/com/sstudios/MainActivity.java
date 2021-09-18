@@ -17,14 +17,14 @@ public class MainActivity extends AppCompatActivity {
 
     //bottom navbar instantiated
     MeowBottomNavigation bottomNavigationView;
-
+    Toolbar toolbar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
         bottomNavigationView = findViewById(R.id.bottomNavigationBar);
-
+        toolbar = findViewById(R.id.top_toolbar);
         bottomNavigationView.add(new MeowBottomNavigation.Model(1, R.drawable.home_icon));
         bottomNavigationView.add(new MeowBottomNavigation.Model(2, R.drawable.ic_baseline_search_24));
         bottomNavigationView.add(new MeowBottomNavigation.Model(3, R.drawable.ic_baseline_add_24));
@@ -57,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
 
         //set notification count
         bottomNavigationView.setCount(1, "7");
-        bottomNavigationView.show(1, true);
+        bottomNavigationView.show(3, true);
         bottomNavigationView.setBackgroundColor(ContextCompat.getColor(getApplicationContext(), android.R.color.transparent));
         bottomNavigationView.setOnClickMenuListener(new MeowBottomNavigation.ClickListener() {
             @Override
@@ -70,6 +70,9 @@ public class MainActivity extends AppCompatActivity {
             public void onReselectItem(MeowBottomNavigation.Model item) {
             }
         });
+
+
+        setSupportActionBar(toolbar);
 
     }
 
